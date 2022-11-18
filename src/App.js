@@ -1,5 +1,5 @@
 import { clear } from '@testing-library/user-event/dist/clear';
-import './App.css';
+import './index.css';
 import Employee from './components/Employee';
 import {useState} from 'react';
 
@@ -8,7 +8,7 @@ function App() {
   const showEmployees = true;
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header bg-red-300">
         {showEmployees ?
         <>
           <input type="text" onChange={(e) => {
