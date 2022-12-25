@@ -2,6 +2,8 @@ import './index.css';
 import Employee from './components/Employee';
 import {useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
+import AddEmployee from './components/AddEmployee';
+import { FormGroup } from 'react-bootstrap';
 
 function App() {
   const [role, setRole] = useState('dev');
@@ -25,6 +27,17 @@ function App() {
       return employee;
     });
     setEmployee(updatedEmployees)
+  }
+
+  function addEmployee(name, role, image) {
+    let newEmployee = {
+      id : uuidv4(),
+      name,
+      role,
+      img : image
+    };
+    console.log(newEmployee);
+    setEmployee([...employees, newEmployee])
   }
 
   const showEmployees = true;
@@ -52,6 +65,7 @@ function App() {
                 );
               })}
             </div>
+            <AddEmployee addEmployee={addEmployee} />
           </>
           )
           : ( 
