@@ -70,11 +70,11 @@ function Employees() {
 
   const showEmployees = true;
   return (
-    <div className="App bg-gray-300 min-h-screen">
+    <div>
       <header className="App-header">
         {showEmployees ? (
           <>
-            <div className="flex flex-wrap justify-center my-3">
+            <div className="flex flex-wrap justify-center">
               {employees.map((employee, cur) => {
                 //console.log(uuidv4())
 
