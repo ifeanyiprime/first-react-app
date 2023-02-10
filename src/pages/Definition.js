@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { v4 as uuid } from "uuid";
+import Dictionary from "./Dictionary";
 
 export default function Definition() {
   const [word, setWord] = useState([]);
@@ -17,6 +18,7 @@ export default function Definition() {
   }, []);
   return (
     <>
+      <Dictionary />
       <h1>
         Here is a definition for{" "}
         <span className="italic font-bold">{search}</span>:
